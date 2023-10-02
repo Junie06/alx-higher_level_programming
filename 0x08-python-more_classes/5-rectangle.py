@@ -49,3 +49,11 @@ class Rectangle:
                 print()
             print('#', end='')
         return ''
+
+    def __repr__(self):
+        a = str(self.__width)
+        b = str(self.__height)
+        return "Rectangle (" + a + ", " + b + ")"
+
+    def __del__(self):
+        print("Bye rectangle...")

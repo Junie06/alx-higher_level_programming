@@ -5,9 +5,13 @@
 class Rectangle:
     '''Defines properties of a rectangle'''
 
+    number_of_instances = 0
+    print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -47,5 +51,14 @@ class Rectangle:
         for i in range(self.area()):
             if i and not (i % self.__width):
                 print()
-            print('#', end='')
+            print(self.print_symbol, end='')
         return ''
+
+    def __repr__(self):
+        a = str(self.__width)
+        b = str(self.__height)
+        return "Rectangle (" + a + ", " + b + ")"
+
+    def __del__(self):
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1

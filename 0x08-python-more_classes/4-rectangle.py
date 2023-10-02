@@ -45,7 +45,7 @@ class Rectangle:
         if not self.__width or not self.__height:
             return ''
         for i in range(self.area()):
-            if i and not(i % self.__width):
+            if i and not (i % self.__width):
                 print()
             print('#', end='')
         return ''
