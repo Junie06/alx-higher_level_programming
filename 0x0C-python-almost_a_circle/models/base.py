@@ -7,15 +7,15 @@ class Base:
 
     __nb_objects = 0
 
-    def __init__(self, id=None):
+    def __init__(self, iden=None):
         """Constructs the class
 
         Args:
         id(int): id parameter
 
         """
-        if id is not None:
-            self.id = id
+        if iden is not None:
+            self.id = iden
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
