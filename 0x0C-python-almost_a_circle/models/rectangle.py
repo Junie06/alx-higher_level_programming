@@ -11,10 +11,15 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Args:
-        width(int, float): width of a rectangle
-        height(int, float): height of a rectangle
-        x(int, float): x co-ordinate
-        y(int, float): y co-ordinate
+        width(int): width of a rectangle
+        height(int): height of a rectangle
+        x(int): x co-ordinate
+        y(int): y co-ordinate
+        
+        Raises:
+            TypeError: if width, height, x or y is not an int
+            ValueError: if width or height is <= 0
+            ValueError: if x or y is < 0
 
         """
         self.width = width
@@ -25,8 +30,19 @@ class Rectangle(Base):
 
         @property
         def width(self):
-            """set and get width of Rectangle"""
             return self.__width
+
+        @property
+        def height(self):
+            return self.__height
+
+        @property
+        def x(self):
+            return self.__x
+
+        @property
+        def y(self):
+            return self.__y
 
         @width.setter
         def width(self, val):
@@ -35,22 +51,7 @@ class Rectangle(Base):
             if width <= 0:
                 raise ValueError("width must be > 0")
             self.__width = val
-
-        @property
-        def height(self):
-            """sets and gets height of Rectangle"""
-            return self.__height
-
-        @property
-        def x(self):
-            """sets and gets the x co-ordinate"""
-            return self.__x
-
-        @property
-        def y(self):
-            """sets and gets the y co-ordinate"""
-            return self.__y
-
+        
         @height.setter
         def height(self, val):
             if type(val) is not int:
