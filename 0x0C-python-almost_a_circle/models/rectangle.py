@@ -25,6 +25,7 @@ class Rectangle(Base):
 
         @property
         def width(self):
+            """set and get width of Rectangle"""
             return self.__width
 
         @width.setter
@@ -34,17 +35,20 @@ class Rectangle(Base):
             if width <= 0:
                 raise ValueError("width must be > 0")
             self.__width = val
-        
+
         @property
         def height(self):
+            """sets and gets height of Rectangle"""
             return self.__height
 
         @property
         def x(self):
+            """sets and gets the x co-ordinate"""
             return self.__x
 
         @property
         def y(self):
+            """sets and gets the y co-ordinate"""
             return self.__y
 
         @height.setter
@@ -88,5 +92,5 @@ class Rectangle(Base):
 
         def __str__(self):
             """Returns the string representation of class Rectangle"""
-            return "[Rectangle] {()} {}/{} - {}/{}".format(self.id, self.x,
-                    self.y, self.width, self.height)
+            return f"[Rectangle] {(self.id)} {self.x}/{self.y}"
+        "- {self.width}/{self.height}"
