@@ -13,8 +13,8 @@ class Rectangle(Base):
         Args:
         width(int, float): width of a rectangle
         height(int, float): height of a rectangle
-        x(int, float)
-        y(int, float)
+        x(int, float): x co-ordinate
+        y(int, float): y co-ordinate
 
         """
         self.width = width
@@ -27,6 +27,14 @@ class Rectangle(Base):
         def width(self):
             return self.__width
 
+        @width.setter
+        def width(self, val):
+            if type(val) is not int:
+                raise TypeError("width must be an integer")
+            if width <= 0:
+                raise ValueError("width must be > 0")
+            self.__width = val
+        
         @property
         def height(self):
             return self.__height
@@ -39,17 +47,9 @@ class Rectangle(Base):
         def y(self):
             return self.__y
 
-        @width.setter
-        def width(self, val):
-            if not type(val, int):
-                raise TypeError("width must be an integer")
-            if width <= 0:
-                raise ValueError("width must be > 0")
-            self.__width = val
-
         @height.setter
         def height(self, val):
-            if not type(val, int):
+            if type(val) is not int:
                 raise TypeError("height must be an integer")
             if height <= 0:
                 raise ValueError("height must be > 0")
@@ -57,7 +57,7 @@ class Rectangle(Base):
 
         @x.setter
         def x(self, val):
-            if not type(val, int):
+            if type(val) is not:
                 raise TypeError("x must be an integer")
             if value < 0:
                 raise ValueError("x must be >= 0")
@@ -65,7 +65,7 @@ class Rectangle(Base):
 
         @y.setter
         def y(self, val):
-            if not type(val, int):
+            if type(val) is not int:
                 raise TypeError("y must be an integer")
             if value < 0:
                 raise ValueError("y must be >= 0")
@@ -89,5 +89,4 @@ class Rectangle(Base):
         def __str__(self):
             """Returns the string representation of class Rectangle"""
             return "[Rectangle] {()} {}/{} - {}/{}".format(self.id, self.x,
-                                                        self.y, self.width,
-                                                        self.height)
+                    self.y, self.width, self.height)
