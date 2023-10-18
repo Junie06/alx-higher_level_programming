@@ -12,6 +12,10 @@ from models.square import Square
 class TestBase_instantiation(unittest.TestCase):
     """Unnitest to check for instantiation of class Base"""
 
+    def test_id_assign(self):
+        rectangle = Rectangle(5, 3)
+        self.assertIsNotNone(rectangle.id)
+
     def test_no_param(self):
         b1 = Base()
         b2 = Base()
