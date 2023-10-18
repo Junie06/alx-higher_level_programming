@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 '''Defines a class Base'''
+import json
+import csv
+import turtle
 
 
 class Base:
@@ -7,15 +10,15 @@ class Base:
 
     __nb_objects = 0
 
-    def __init__(self, iden=None):
+    def __init__(self, id=None):
         """Constructs the class
 
         Args:
         id(int): id parameter
 
         """
-        if iden is not None:
-            self.id = iden
+        if id is not None:
+            self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
