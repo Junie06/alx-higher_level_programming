@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines the class Rectangle that 
+Defines the class Rectangle that
 inherits from parent class base
 """
 from models.base import Base
@@ -92,7 +92,7 @@ class Rectangle(Base):
         """
         if type(value) != int:
             raise TypeError("y must be an integer")
-        if value  < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
