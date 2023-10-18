@@ -1,20 +1,22 @@
 #!/usr/bin/python3
-"""Defines class Rectangle that inherits from super class Base"""
-
+"""
+Defines the class Rectangle that 
+inherits from parent class base
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Defines a subclass Rectangle that initializes the properties
-    of a rectangle"""
+    """
+    Defines a subclass Rectangle that initializes
+    the properties
+    of a rectangle
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Args:
-            width(int, float): width of a rectangle
-            height(int, float): height of a rectangle
-            x(int, float)
-            y(int, float)
+        constructs the attributes
+        of the class
         """
         self.width = width
         self.height = height
@@ -24,12 +26,16 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """gets the attribute"""
+        """
+        gets the attribute
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """validates instantiation"""
+        """
+        validates instantiation
+        """
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -38,12 +44,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """gets the attribute"""
+        """
+        gets the attribute
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """validates instantiation"""
+        """
+        validates instantiation
+        """
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -52,12 +62,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """gets the attribute"""
+        """
+        gets the attribute
+        """
         return self.__x
 
     @x.setter
     def x(self, value):
-        """validates instantiation"""
+        """
+        validates instantiation
+        """
         if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -66,12 +80,16 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """gets the attribute"""
+        """
+        gets the attribute
+        """
         return self.__y
 
     @y.setter
     def y(self, value):
-        """validates instantiation"""
+        """
+        validates instantiation
+        """
         if type(value) != int:
             raise TypeError("y must be an integer")
         if value  < 0:
@@ -79,10 +97,14 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """Calculates the area value of a rectangle"""
+        """
+        Calculates the area value of a rectangle
+        """
         return self.width * self.height
 
     def display(self):
-        """Prints to standard output the display of the character #"""
-        for i in range(self.height)
-        print('#' * self.width)
+        """
+        Prints to standard output the display of the character #
+        """
+        for i in range(self.height):
+            print('#' * self.width)
