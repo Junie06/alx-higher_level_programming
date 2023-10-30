@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Reads a text file"""
-import json
 
 
 def read_file(filename=""):

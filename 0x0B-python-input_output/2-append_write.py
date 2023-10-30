@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Appends to a file"""
-import json
 
 
 def append_write(filename="", text=""):
