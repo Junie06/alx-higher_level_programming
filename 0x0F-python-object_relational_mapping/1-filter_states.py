@@ -13,4 +13,4 @@ if __name__ == "__main__":
 
             for row in rows:
                 if row[1].startswith("N"):
-                print(row)
+                    print(row)
