@@ -16,4 +16,4 @@ if __name__ == "__main__":
         states = sess.query(State).filter(State.name.like('%a%')).all()
         for state in states:
             sess.delete(state)
-            sess.commit()
+        sess.commit()
